@@ -1,12 +1,15 @@
-nosudo is a very simple bash script that fakes sudo using su. It is licensed under GPLv3.
+nosudo is a simple bash script that mimics some of sudo's features.
 
-## Changelog
+It is licensed under GPLv3.
 
-* 0.3 : nosudo should now supports aliases that are in the .bashrc of the user who executes the command
-* 0.2.3 : fixed the su arguments
-* 0.2.2 : fixed bug with spaces in pwd
-* 0.2.1 : show an error message when no valid command is found
-* 0.2 :
-  * support for the sudo `-l` option
-  * handling of sudo options, actually we skip everything that isn't either `-l` or a program
-* 0.1 : Initial release
+## Features
+
+* Supports some sudo options:
+  * b,E,e,H,h,i,n,u should act approximately the same way as with sudo
+  * -l always acts as if the user can run any command
+  * K,k,p,U,V,v are ignored
+  * A,C,g,L,P,r,S,s,t aren't implemented, nosudo exists if it encounters them
+* Resolves aliases (the real sudo doesn't do it), tested in bash and zsh.
+* Has a debug mode:
+  * activated by setting the $DEGUB environment variable
+  * logs to ~/nosudo-debug
