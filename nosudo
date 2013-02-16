@@ -68,9 +68,9 @@ while getopts AbC:Eeg:HhiLlnPp:r:Sst:U:u:Vv flag; do
 			# ignore
 			;;
 		A|C|g|L|P|r|S|s|t)
-			die "nosudo doesn't implement sudo's -$OPTARG flag" ;;
+			die "nosudo doesn't implement sudo's -$flag flag" ;;
 		?)
-			die "unknown option: -$OPTARG" >&2 ;;
+			die "unknown option: -$flag" >&2 ;;
 	esac
 done
 
