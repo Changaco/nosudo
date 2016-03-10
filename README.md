@@ -1,7 +1,5 @@
 nosudo is a simple bash script that mimics some of sudo's features.
 
-It is licensed under GPLv3.
-
 ## Features
 
 * Supports some sudo options:
@@ -13,3 +11,7 @@ It is licensed under GPLv3.
 * Has a debug mode:
   * activated by setting the $DEGUB environment variable
   * logs to ~/nosudo-debug
+
+## License
+
+[CC0 Public Domain Dedication](http://creativecommons.org/publicdomain/zero/1.0/)

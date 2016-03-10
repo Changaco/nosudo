@@ -1,11 +1,5 @@
 #!/bin/bash
 
-# This program is licensed under the terms of the GNU General Public License
-# version 3 (or at your option any later version) as published by the Free
-# Software Foundation. If you have not received a copy of the license along with
-# this file, see <http://www.gnu.org/licenses/>.
-
-
 debug(){ [[ $DEBUG ]] && echo "$@" >>~/nosudo-debug; }
 die() { echo "error: $1" >/dev/stderr; exit 1; }
 out(){ echo "$@"; debug "out: $@"; }
