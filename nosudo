@@ -40,7 +40,7 @@ _su() {
 debug "argv: $@"
 
 su_opts=""; user="root"; before_cmd=""; after_cmd=""
-while getopts AbC:Eeg:HhiLlnPp:r:Sst:U:u:Vv flag; do
+while getopts AbC:Eeg:HhiKkLlnPp:r:Sst:U:u:Vv flag; do
 	case $flag in
 		b) after_cmd+=" &" ;;
 		E) su_opts+=" -m" ;;
